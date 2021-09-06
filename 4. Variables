@@ -1,10 +1,40 @@
 #!/bin/bash
 
-user=likegeeks
+user=anotherUser
 
 if grep $user /etc/passwd; then
 
-	echo "No such a user $user"
-then 
-  echo "Exists the user $user"
+	echo "The user $user Exists"
+
+elif ls /home; then
+
+	echo "The user doesn’t exist"
+
+fi
+
+
+name="likegeeks"
+
+if [ -d $dir ] && [ -n $name ]; then
+
+	echo "The name exists and the folder $dir exists."
+
+else
+
+	echo "One test failed"
+
+fi
+
+dir=/home/likegeeks
+
+name="likegeeks"
+
+if [ -d $dir ] || [ -n $name ]; then
+
+	echo "Success!"
+
+else
+
+	echo "Both tests failed"
+
 fi

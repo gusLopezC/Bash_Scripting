@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#-d my_file Comprueba si es una carpeta.
+#-e my_file Comprueba si el archivo está disponible.
+#-f my_file Comprueba si es un archivo.
+-r my_file Comprueba si es legible.
+#my_file -nt my_file2 Comprueba si my_file es más nuevo que my_file2.
+#my_file -ot my_file2 Comprueba si my_file es más viejo que my_file2.
+#-O my_file Comprueba si el propietario del archivo y el usuario registrado coinciden.
+#-G mi_archivo Comprueba si el archivo y el usuario registrado tienen el grupo idéntico.
+
+mydir=/home/likegeeks
+
+if [ -d $mydir ]; then
+
+	echo "Directory $mydir exists"
+
+	cd $mydir
+
+	ls
+
+else
+
+	echo "NO such file or directory $mydir"
+
+fi

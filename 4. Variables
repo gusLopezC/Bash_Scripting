@@ -1,0 +1,10 @@
+#!/bin/bash
+
+user=likegeeks
+
+if grep $user /etc/passwd; then
+
+	echo "No such a user $user"
+then 
+  echo "Exists the user $user"
+fi

@@ -1,0 +1,33 @@
+# Hello World Program in Bash Shell
+
+distros=(Ubuntu Linux\ Mint Deepin Manjaro Elementary)
+
+for i in "${distros[@]}"
+do
+    echo $i
+done
+echo "=========================="
+echo ${distros[@]:1:2}
+
+echo "=========================="
+echo ${distros[0]:2:4}
+echo "=========================="
+distros=(${distros[@]:0:1} ${distros[@]:2})
+
+for i in "${distros[@]}"
+do
+    echo $i
+done
+echo "=========================="
+
+distros1=(Ubuntu Knoppix PureOS)
+distros2=(Mandrake CentOS Fedora)
+
+distros=(${distros1[@]} ${distros2[@]})
+
+echo ${distros[@]}
+
+nuevo=(${distros[@]:4})
+echo ${nuevo[@]}
+nuevo=(${distros[@]:$((${#distros[@]}-2))})
+echo ${nuevo[@]}
